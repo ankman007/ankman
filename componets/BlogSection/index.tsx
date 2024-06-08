@@ -40,8 +40,16 @@ const BlogSection = () => {
   ];
 
   const sortedPosts = blogPosts.slice().sort((a, b) => {
-    return new Date(b.datePosted) - new Date(a.datePosted);
+    const dateA = new Date(a.datePosted);
+    const dateB = new Date(b.datePosted);
+      
+    if (isNaN(dateA.getTime()) || isNaN(dateB.getTime())) {
+      return 0;
+    }
+  
+    return dateB.getTime() - dateA.getTime();
   });
+  
   return (
     <Container sx={{ marginBottom: "40px", marginTop: "30px" }}>
       <Typography
