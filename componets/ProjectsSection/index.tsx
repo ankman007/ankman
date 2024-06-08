@@ -37,7 +37,7 @@ const ProjectSection = () => {
     "python-100-days-of-code": {
       desc: "Daily logs of my progress and mini-projects made over the course of this challenge",
       techStack: "Python, Flask, Numpy, Selenium, Tkinter",
-      projectLink: "https://github.com/ankman007/php-blogsite",
+      projectLink: "https://github.com/ankman007/Python-100-Days-of-Code",
       deployedLink: "",
     },
   };

@@ -42,14 +42,14 @@ const BlogSection = () => {
   const sortedPosts = blogPosts.slice().sort((a, b) => {
     const dateA = new Date(a.datePosted);
     const dateB = new Date(b.datePosted);
-      
+
     if (isNaN(dateA.getTime()) || isNaN(dateB.getTime())) {
       return 0;
     }
-  
+
     return dateB.getTime() - dateA.getTime();
   });
-  
+
   return (
     <Container sx={{ marginBottom: "40px", marginTop: "30px" }}>
       <Typography
@@ -59,29 +59,39 @@ const BlogSection = () => {
         / blogs
       </Typography>
       <Grid container spacing={2}>
-        {sortedPosts.map((post, index) => (
-          <Grid item xs={12} key={index}>
-            <Typography
-              variant="body1"
-              sx={{ display: "flex", justifyContent: "space-between" }}
-            >
-              <Link
-                href={post.postLink}
-                target="_blank"
-                rel="noopener"
-                sx={{
-                  color: "black",
-                  textDecoration: "none",
-                  borderBottom: "1px solid #899499",
-                }}
-              >
-                {post.title}
-              </Link>
-              <span style={{ marginLeft: "auto" }}>{post.datePosted}</span>
-            </Typography>
-          </Grid>
-        ))}
-      </Grid>
+  {sortedPosts.map((post, index) => (
+    <Grid item xs={12} key={index}>
+      <Typography
+        variant="body1"
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexDirection: {
+            xs: 'column', // Change to column on small screens
+            md: 'row'    // Maintain row on medium and large screens
+          }
+        }}
+      >
+        <Link
+          href={post.postLink}
+          target="_blank"
+          rel="noopener"
+          sx={{
+            color: "black",
+            textDecoration: "none",
+            borderBottom: { xs: "none", md: "1px solid #899499" },
+            marginBottom: { xs: 1, md: 0 }, // Add margin bottom only on small screens
+          }}
+        >
+          {post.title}
+        </Link>
+
+        <span >{post.datePosted}</span>
+      </Typography>
+    </Grid>
+  ))}
+</Grid>
+
     </Container>
   );
 };

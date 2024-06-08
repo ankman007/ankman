@@ -17,7 +17,7 @@ const AboutSection: FC<AboutSectionProps> = () => {
     </p>
   );
   const two = (
-    <p>
+    <Typography>
       I am currently working as Frontend Engineer at{" "}
       <a
         href="https://codesqad.com/"
@@ -44,7 +44,7 @@ const AboutSection: FC<AboutSectionProps> = () => {
         National College Of Computer Studies
       </a>
       .
-    </p>
+    </Typography>
   );
 
   return (
