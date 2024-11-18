@@ -3,41 +3,40 @@ import LaunchOutlinedIcon from "@mui/icons-material/LaunchOutlined";
 
 const ProjectSection = () => {
   const projects = {
+    "todo-application": {
+      desc: "A FastAPI-based Todo application that efficiently manages tasks with endpoints for creating, updating, retrieving, and deleting todos backed by a PostgreSQL database for reliable data storage and management.",
+      techStack: "FastAPI, Postgres, Docker",
+      projectLink: "https://github.com/ankman007/todo-app",
+      deployedLink: "",
+    },
     "cricket-statsguru": {
       desc: "Streamlit-based Nepali cricket visualization dashboard that utilizes python tools & libraries to display interactive charts & statistics",
       techStack: "Python, StreamLit, Pandas, Ploty, ",
       projectLink: "https://github.com/ankman007/cricket-statsguru",
       deployedLink: "https://cricket-statsguru.streamlit.app/",
     },
-    "gadget-gurkhas": {
-      desc: "Next JS 14 based blog application that integrates several of NextJS's essential features",
-      techStack: "Next JS, TypeScript, Tailwind, React",
-      projectLink: "https://github.com/ankman007/next-ts-blog-application",
-      deployedLink:
-        "https://663659e5f6a8fe0ea0a63d38--guileless-eclair-e049d2.netlify.app/",
+    "forest-footprints": {
+      desc: "Uses satellite data & AI generated insights to help communities understand impacts of deforestation and encourages local conservation efforts.",
+      techStack: "React, TypeScript, Django, Leaflet.js",
+      projectLink: "https://github.com/ankman007/forest-footprints",
+      deployedLink: "https://forest-footprints.vercel.app/",
     },
-    "mortgage-calculator": {
-      desc: "Implemented in Java, designed to calculate your monthly mortgage payments & provide a detailed payment schedule for better financial planning.",
-      techStack: "Java, OpenCSV",
-      projectLink: "https://github.com/ankman007/Mortgage-Calculator",
-      deployedLink: "",
-    },
-    "brg-travels": {
-      desc: "Travel website implemented with SCSS & JQuery for interactive and user-friendly design",
-      techStack: "JavaScript, SCSS, JQuery",
-      projectLink: "https://github.com/ankman007/Travel-Website",
-      deployedLink: "https://ankman007.github.io/Travel-Website",
-    },
-    "streamline-minds": {
-      desc: "PHP, Bootstrap, and MySQL-powered blog website for productivity enthusiasts",
-      techStack: "PHP, Bootstrap, CSS",
-      projectLink: "https://github.com/ankman007/php-blogsite",
-      deployedLink: "",
+    "hamro-notepad": {
+      desc: "Lightweight notes app to jot down your thoughts",
+      techStack: "Flask, Bootstrap, SQL Alchemy, Werkzeug",
+      projectLink: "https://github.com/ankman007/hamro-notepad",
+      deployedLink: "https://hamro-notepad.onrender.com/",
     },
     "python-100-days-of-code": {
       desc: "Daily logs of my progress and mini-projects made over the course of this challenge",
       techStack: "Python, Flask, Numpy, Selenium, Tkinter",
       projectLink: "https://github.com/ankman007/Python-100-Days-of-Code",
+      deployedLink: "",
+    },
+    "connectify": {
+      desc: "Backend for social media app",
+      techStack: "FastAPI, Postgres, Docker",
+      projectLink: "https://github.com/ankman007/connectify",
       deployedLink: "",
     },
   };
